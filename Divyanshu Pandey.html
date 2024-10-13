@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divyanshu Pandey</title>
+    <style>
+       
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+  outline: none; border: none;
+  text-transform:capitalize;
+  transition: all .2s linear;
+}
+html{
+    --white: #ffffff;
+    --black: #000;
+      --primary-pink: #ff0000;
+      --secondary-grey: rgb(192, 237, 255);
+      --secondary-pink: rgb(76, 0, 255);
+     scroll-behavior: smooth;
+}
+
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+html::-webkit-scrollbar{
+  width: .8rem;
+}
+html::-webkit-scrollbar-track{
+  background: rgb(235, 202, 245);
+}
+html::-webkit-scrollbar-thumb{
+  background: #420177;
+}
+
+a{
+    text-decoration: none;
+    color: var(--black);
+}
+li{
+    list-style: none;
+}
+h1, h2, h4{
+    color: var(--black);
+}
+h1{
+    font-size: 3.9rem;
+    font-family: 'Play', sans-serif;
+    color: #000000;
+} 
+ h2{
+    font-size: 1.9rem;
+    color: rgb(0, 0, 0);
+}
+h3{
+    font-size: 3rem;
+    color: var(--primary-pink);
+}
+h4{
+    font-size: 2rem;
+}
+p{
+    font-size: 1.7rem;
+    color: rgb(0, 0, 0);
+    margin: 1rem 0 2rem 0;
+    max-width: 80;
+    
+}
+                            /* This is for my Contact Button */
+.primary-btn{
+    border: .1rem solid var(--primary-pink);
+    background: var(--primary-pink);
+    font-size: 2.1rem;
+    border-radius: 5rem;
+    color: var(--white);
+    padding: .6rem 1.5rem;
+}
+
+ .bg-black{
+    background: var(--black);
+} 
+
+.bg-grey{
+    background: var(--secondary-grey);
+}
+.section{
+    padding: 6rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+  .container{
+    width: 80%;
+    margin: auto;
+    padding: 0 2rem;
+}
+.row-conatainer, .column-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.row-conatainer{
+    gap: 7rem;
+}
+.column-container{
+    flex-direction: column;
+    gap: 3rem;
+    text-align: center;
+    font-size: 4rem;
+}
+
+.content{
+    max-width: 50%;
+    }
+img{
+    height: 100%;
+    display: inline-block;
+}
+.fa-solid{
+    margin-right: 1rem;
+}
+
+                            /* #First Section CSS */
+
+.first-section{
+    height: calc(100vh - 13vh);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img-container{
+    height:30rem;
+    width: 30rem;
+    background: linear-gradient(var(--secondary-pink), transparent);
+    position: relative;
+    margin-top: 199px;
+    margin-left: 200px;
+   }
+
+.info{
+    font-size: 20px;
+    text-align: center;
+}
+
+.img-container img{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 150px;
+    border-radius: 29rem
+}
+input,textarea{
+    width: 100%;
+    border: none;
+    border-radius: .2rem;
+    padding: .9rem 1rem;
+    resize: none;
+    font-size: 1.4rem;
+}
+input:focus ,textarea:focus{
+    outline: .1rem solid var(--primary-pink);
+
+}
+                                    /* Footer */
+.footer-section{
+    padding: 1rem;
+    text-align: center;
+}
+#contact{
+    margin-top: 12rem;
+    color: Red;
+    text-align: center;
+  }
+  .contact-{
+        color: Red;
+    text-align: center;
+}
+pre{
+    font-size: large;
+    color: pink;
+}
+.img{
+  margin-top: 4rem;
+  height: 3rem;
+
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none; border: none;
+  text-transform:capitalize;
+  transition: all .2s linear;
+}
+header{
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.7rem 10%;
+  height: 6.5rem;
+  background-color: #fff;
+  box-shadow: 0 1px 4px rgba(146,161,176,.3);
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  background: #ffffff;
+  font-family: 'Poppins', sans-serif;
+ }
+
+header .logo{
+  font-size: 1.9rem;
+  font-weight: 800;
+  text-decoration: none;
+  color: #0E2431;
+  
+}
+header .logo{
+  font-size: 2.2rem;
+  
+}
+header .logo:hover {
+  color: #fc8c05;
+  
+}
+header .navbar ul{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .navbar li{
+  margin-left: 2.5rem;
+}
+header .navbar ul li a{
+  font-size: 1.57rem;
+  color: #0E2431;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.04rem;
+}
+header .navbar  a:hover{
+  color: #011aff;
+  border-bottom: .2rem solid #011aff;
+  padding: .5rem 0;
+}
+
+  </style> 
+
+   
+</head>
+<body>
+  <!-- navbar starts -->
+  <div>
+  <header>
+    <a href="#" class="logo">Divyanshu Pandey</a>
+
+    <div id="menu" class="fas fa-bars"></div>
+    <nav class="navbar">
+        <ul>
+        <li><a href="/#home">Home</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/#skills">Skills</a></li>
+        <li><a href="/#education">Education</a></li>
+        <li><a href="/#work">Work</a></li>
+        <li><a href="/#experience">Experience</a></li>
+        <li><a href="/#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+</div>
+                            <!-- #first Section -->
+            <div style="background-color: rgb(255, 255, 255);">
+         <section class="first-section bg-grey">
+          <div class="container">
+         <div class="row-conatainer">
+            <div class="content">
+               
+                <h3>Hello !</h3>
+                <h1>I'am Divyanshu Pandey</h1>
+                <h2>Explore the journey of HTML & CSS.</h2>
+                <p>Hello! I'm Divyanshu Pandey, a Class 10<sup>th</sup> student passionate about CSS and HTML.</p>
+                <a href=#exploreme  class="primary-btn">Explore Me</a>
+                <br>          
+                <Img src="https://img.icons8.com/?size=48&id=32323&format=png" class="img">
+                  &nbsp; <Img src="https://img.icons8.com/?size=48&id=uLWV5A9vXIPu&format=png" class="img">
+                  &nbsp; <Img src="https://img.icons8.com/?size=48&id=5MQ0gPAYYx7a&format=png" class="img">
+                  &nbsp; <Img src="https://img.icons8.com/?size=48&id=63306&format=png" class="img">
+                  &nbsp; <Img src="https://img.icons8.com/?size=80&id=wqGmdISvpm0c&format=png" class="img">
+                        
+                 
+              </div>
+             <div class="img-container" alt="Divyanshu">
+             <img src="https://avatars.githubusercontent.com/u/64949957?v=4">
+             </div>
+             </div>    
+                 </div>
+                </div>
+                 </section>
+
+                           
+                       
+                        <h1 id="contact">About Me</h1>
+                        <p class="info">hi 🖐 I am a 10<sup>th</sup> standard student Passionate about coading.</p>
+                        <p class="info">💻 Turning ideas into reality Through Technology.</p>
+                        <p class="info">Explore my project and let's connect!🚀</p>  
+                        <p class="info">Thank you 🙏</p>   
+                         <!-- contect -->
+            
+             <section class="section">
+                <div class="container">
+                    <div class="column-container">
+                        <div class="content">
+                            <h1 class="contact-">Get in Touch</h1>
+                            
+                        </div>
+                        <form>
+                            <input type="text" placeholder="Username" required="">
+                            <input type="contect-number" placeholder="Phone Number" required="">
+                            <input type="email" placeholder="Email Address" required="">
+                            <textarea placeholder="Type Your message here" rows="6" required=""></textarea>
+                            <input type="submit" value="Send Message" class="primary-btn">
+                        </form>
+                    </div>
+                </div>
+        </section>
+
+               </main>
+                                <!-- #Footer -->
+                 <footer class="footer-section bg-black">
+                  <div class="container">
+                  <pre>© Divyanshu Pandey</pre>
+                   
+                      </div>
+                </footer>
+                </body>
+                </html>
+            
+   
+
+
