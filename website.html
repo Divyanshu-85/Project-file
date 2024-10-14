@@ -236,7 +236,6 @@
             color: white;
         }
 
-
         /* Media Queries for devices with a width of 767px or smaller */
         @media (min-width: 200px) and (max-width: 800px) {
             body {
@@ -379,11 +378,6 @@
             justify-content: center;
             align-items: center;
         }
-        /* .pic2{
-            height: 5rem;
-            width: 5rem;
-        } */
-
         button {
             height: 1rem;
             width: 3rem;
@@ -461,11 +455,6 @@
                 font-size: 1rem;
                 padding: 0.1rem;
             }  
-/* .flipbook {
-    width: 90px;
-    height: 60px;
-  } */
-
   .flipbook .leaf {
     width: 50%; /* This keeps the leaf width at half of the flipbook's width */
   }
@@ -483,21 +472,7 @@
     font-size: 12px;
   }
 }
-         
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
+        
 .itz-me{
     height: 25rem;
     border-radius: 2rem;
@@ -683,52 +658,18 @@ body[onload] div.leaf:nth-child(4) > div:nth-child(1) {
   background: linear-gradient(32deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </style>
 </head>
 <body>
 
     <div class="sidebar" id="sidebar">
-        <div class="head"></div>
-        <a href="#home">Home</a>
-        <a href="#profile">Profile</a>
-        <a href="https://rawcdn.githack.com/Divyanshu-85/Required-Document/d81aa8e0f0cd6de1277fad4ca97a1a541048130d/Best%20login%20form.html">Login</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-        <a href="#about" id="aboutToggle">About</a>
+        <div class="head" onclick="toggleSidebar()"></div>
+        <a href="#home" onclick="toggleSidebar()">Home</a>
+        <a href="#profile" onclick="toggleSidebar()">Profile</a>
+        <a href="https://rawcdn.githack.com/Divyanshu-85/Required-Document/d81aa8e0f0cd6de1277fad4ca97a1a541048130d/Best%20login%20form.html" onclick="toggleSidebar()">Login</a>
+        <a href="#services" onclick="toggleSidebar()">Services</a>
+        <a href="#contact" onclick="toggleSidebar()">Contact</a>
+        <a href="#about" id="aboutToggle" onclick="toggleSidebar()">About</a>
         <div class="chat-icon" onclick="toggleChat()">
             <img src="https://img.icons8.com/?size=100&id=nToPp1ZMxcSe&format=png&color=000000" class="pic1" alt="Chat Icon">
         </div>
@@ -742,8 +683,7 @@ body[onload] div.leaf:nth-child(4) > div:nth-child(1) {
         <p></p><b>Name:- </b>Divyanshu pandey <br></p>
         <p></p><b>Standard:- </b>11 <sup>th</sup> <br></p>
         <p></p><b>Passion:- </b>Programming</p>
-    </div>
-    
+    </div>    
     <div class="chat-container" id="chat-container">
         <div class="chatbox" id="chatbox"></div>
         <div class="quick-replies" id="quick-replies">
@@ -755,31 +695,6 @@ body[onload] div.leaf:nth-child(4) > div:nth-child(1) {
         <button onclick="sendMessage()">Send</button>
         <div class="typing-indicator" id="typing-indicator" style="display: none;">Chatbot is typing...</div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <div class="book"><a href="" name="about"></a>
     <div class="flipbook centered" id="flipbook">
@@ -874,121 +789,6 @@ body[onload] div.leaf:nth-child(4) > div:nth-child(1) {
         <button id="nextPage" class="button1">Next &gt;</button>
       </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- <div class="foot"></div> -->
 <script>
     class FlipBook{
@@ -1059,11 +859,6 @@ body[onload] div.leaf:nth-child(4) > div:nth-child(1) {
 var flipBook = new FlipBook(document.getElementById("flipbook"));
 
 
-
-
-
-
-
 // Hide the flipbook and buttons on page load
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById('flipbook').style.display = 'none';
@@ -1077,96 +872,6 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById('prevPage').style.display = 'inline-block';
     document.getElementById('nextPage').style.display = 'inline-block';
   });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
     const jokes = [
         "Why don't scientists trust atoms? Because they make up everything!",
         "Why did the computer go to the doctor? It had a virus!",
@@ -1188,10 +893,10 @@ document.addEventListener("DOMContentLoaded", function() {
         "A day on Venus is longer than a year on Venus!",
         "Bananas are berries, but strawberries aren't!"
     ];
-    function toggleSidebar() {
-            const sidebar = document.getElementById('sidebar');
-            sidebar.classList.toggle('open');
-        }
+      function toggleSidebar() {
+        const sidebar = document.getElementById('sidebar');
+        sidebar.classList.toggle('open');
+    }
 
     function toggleChat() {
         const chatContainer = document.getElementById("chat-container");
