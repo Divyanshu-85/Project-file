@@ -1,46 +1,76 @@
-import tkinter as tk
-import pyttsx3
+import mysql.connector
 
-def speak(message):
-    engine = pyttsx3.init()
-    engine.say(message)
-    engine.runAndWait()
+# Establish connection to the MySQL database
+db = mysql.connector.connect(
+    host="localhost",
+    user="your_username",      # replace with your MySQL username
+    password="your_password",  # replace with your MySQL password
+    database="login_db"
+)
 
-def login():
-    userid = username_entry.get()
-    password = password_entry.get()
+# Create a cursor object to interact with the database
+cursor = db.cursor()
 
-    # You can add your own validation logic here
-    if userid == "Hacker@85" and password == "08052008":
-        speak("Access granted!")
-        parent.destroy()  # Close the window upon successful login
+# Function to register a new user
+def register(username, password):
+    try:
+        query = "INSERT INTO users (username, password) VALUES (%s, %s)"
+        cursor.execute(query, (username, password))
+        db.commit()
+        print("Registration successful!")
+    except mysql.connector.Error as err:
+        print(f"Error: {err}")
+
+# Function to change user credentials
+def change_credentials(old_username, new_username, new_password):
+    try:
+        query = "UPDATE users SET username = %s, password = %s WHERE username = %s"
+        cursor.execute(query, (new_username, new_password, old_username))
+        db.commit()
+        print("Credentials updated successfully!")
+    except mysql.connector.Error as err:
+        print(f"Error: {err}")
+
+# Main loop for user interaction
+while True:
+    print("\n1. Login")
+    print("2. Register")
+    print("3. Change Username/Password")
+    print("4. Exit")
+
+    choice = input("Choose an option: ")
+
+    if choice == '1':
+        username = input("Enter your username: ")
+        password = input("Enter your password: ")
+
+        # Check if the user exists
+        query = "SELECT * FROM users WHERE username = %s AND password = %s"
+        cursor.execute(query, (username, password))
+        user = cursor.fetchone()
+
+        if user:
+            print(f"Login successful! Welcome, {username}.")
+        else:
+            print("Invalid credentials. Please try again.")
+
+    elif choice == '2':
+        username = input("Choose a username: ")
+        password = input("Choose a password: ")
+        register(username, password)
+
+    elif choice == '3':
+        old_username = input("Enter your current username: ")
+        new_username = input("Enter a new username: ")
+        new_password = input("Enter a new password: ")
+        change_credentials(old_username, new_username, new_password)
+
+    elif choice == '4':
+        break
+
     else:
-        speak("Access denied.")
+        print("Invalid option. Please try again.")
 
-# Create the main window
-parent = tk.Tk()
-parent.title("Login Form")
-
-# Adjust window size and position (optional)
-parent.geometry("300x200+500+300")
-
-# Create and place the username label and entry
-username_label = tk.Label(parent, text="User ID:")
-username_label.pack(pady=10)
-
-username_entry = tk.Entry(parent)
-username_entry.pack(pady=5)
-
-# Create and place the password label and entry
-password_label = tk.Label(parent, text="Password:")
-password_label.pack(pady=10)
-
-password_entry = tk.Entry(parent, show="*")  # Show asterisks for password
-password_entry.pack(pady=5)
-
-# Create and place the login button
-login_button = tk.Button(parent, text="Login", command=login)
-login_button.pack(pady=10)
-
-# Run the main loop
-parent.mainloop()
+# Close the cursor and database connection
+cursor.close()
+db.close()
