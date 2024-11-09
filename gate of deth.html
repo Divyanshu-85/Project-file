@@ -11,7 +11,7 @@
       margin: 0;
       background-color: #000000;
     /*   overflow: hidden; */
-      font-family: chiller;
+    /*  font-family: chiller; */ 
     }
     .door-container {
       width: 400px;
@@ -103,6 +103,7 @@
       margin-bottom: 10px;
       font-size: 2.5rem;
       color: red;
+      font-family: chiller;
     }
     input {
       width: 100%;
@@ -250,6 +251,25 @@
         a:hover {
             font-size: 2rem;
             color: rgb(0, 255, 191);
+        }
+    #question{
+      font-family: chiller;
+      
+    }
+    .flipbook {
+  animation: up-down 1s ease-in-out infinite;
+  
+}
+        @keyframes up-down {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /* Move up */
+  }
+  100% {
+    transform: translateY(0); /* Move back down */
+  }
         }
 
 /* about hide part */
