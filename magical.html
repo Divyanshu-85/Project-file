@@ -535,10 +535,10 @@ input:focus ,textarea:focus{
      .main{
       padding-left: 15rem;
     } 
-    #cover-left{
+    #coverleft1{
       border-top-left-radius: 18rem;
     }
-    #cover-right{
+    #coverright1{
       border-top-right-radius: 18rem;
 }
 
@@ -966,8 +966,8 @@ body[onload] div.leaf:nth-child(4) > div:nth-child(1) {
 <div class="king">
   <div id="aboutDiv" class="hidden">
 <div class="door-container">
-  <div class="door left-door"><img src="https://github.com/Divyanshu-85/Required-Document/blob/main/2.jpg?raw=true" class="cover1" id="cover-left Imglink"> </div>
-  <div class="door right-door"><img src="https://github.com/Divyanshu-85/Required-Document/blob/main/1.jpg?raw=true" class="cover1" id="cover-right Imglink"></div>
+  <div class="door left-door"><img src="https://github.com/Divyanshu-85/Required-Document/blob/main/2.jpg?raw=true" class="cover1" id="coverleft1"> </div>
+  <div class="door right-door"><img src="https://github.com/Divyanshu-85/Required-Document/blob/main/1.jpg?raw=true" class="cover1" id="coverright1"></div>
     <div id="Img" class="hidden">
   <img src="https://github.com/Divyanshu-85/Required-Document/blob/main/gatemen.png?raw=true" alt="Gateman" class="gateman" id="gateman"> 
         </div>
@@ -1344,11 +1344,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
         // Get references to the link and the div
-        const Imglink = document.getElementById('Imglink');
+        const coverleft1 = document.getElementById('coverleft1');
         const Img = document.getElementById('Img');
 
         // Add click event listener to the "About" link
-        Imglink.addEventListener('click', function(event) {
+     coverleft1.addEventListener('click', function(event) {
             event.preventDefault(); // Prevent default link behavior
 
             if (Img.classList.contains('visible')) {
