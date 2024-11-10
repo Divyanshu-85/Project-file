@@ -729,7 +729,23 @@ body[onload] div.leaf:nth-child(4) > div:nth-child(1) {
 
 
 
+        /* Initial hidden state for the div */
+        .hidden {
+            display: none;
+        }
 
+        /* Style for the div when it's shown */
+        #Img {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+
+        /* Animation when the div becomes visible */
+        #Img.visible {
+            opacity: 1;
+            transform: translateY(0);
+    }
 
 
 
@@ -950,9 +966,11 @@ body[onload] div.leaf:nth-child(4) > div:nth-child(1) {
 <div class="king">
   <div id="aboutDiv" class="hidden">
 <div class="door-container">
-  <div class="door left-door"><img src="https://github.com/Divyanshu-85/Required-Document/blob/main/2.jpg?raw=true" class="cover1" id="cover-left"></div>
-  <div class="door right-door"><img src="https://github.com/Divyanshu-85/Required-Document/blob/main/1.jpg?raw=true" class="cover1" id="cover-right"></div>
-  <img src="https://github.com/Divyanshu-85/Required-Document/blob/main/gatemen.png?raw=true" alt="Gateman" class="gateman" id="gateman">
+  <div class="door left-door"><img src="https://github.com/Divyanshu-85/Required-Document/blob/main/2.jpg?raw=true" class="cover1" id="cover-left" id="Imglink"></div>
+  <div class="door right-door"><img src="https://github.com/Divyanshu-85/Required-Document/blob/main/1.jpg?raw=true" class="cover1" id="cover-right" id="Imglink"></div>
+    <div id="Img" class="hidden">
+  <img src="https://github.com/Divyanshu-85/Required-Document/blob/main/gatemen.png?raw=true" alt="Gateman" class="gateman" id="gateman"> 
+        </div>
   <div class="door-content" id="doorContent">
     Welcome to the Hidden World!
   </div>
@@ -1325,7 +1343,24 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+        // Get references to the link and the div
+        const Imglink = document.getElementById('Imglink');
+        const Img = document.getElementById('Img');
 
+        // Add click event listener to the "About" link
+        Imglink.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default link behavior
+
+            if (Img.classList.contains('visible')) {
+                // If the div is visible, hide it
+                Img.classList.remove('visible');
+                setTimeout(() => Img.classList.add('hidden'), 500); // Delay hiding after animation
+            } else {
+                // If the div is hidden, show it
+                Img.classList.remove('hidden');
+                setTimeout(() => Img.classList.add('visible'), 10); // Trigger animation
+            }
+        });
 
 
 
