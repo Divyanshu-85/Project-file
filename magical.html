@@ -1343,28 +1343,23 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-        // Get references to the link and the div
+        
+
+
+// Get references to the link and the div
         const coverleft1 = document.getElementById('coverleft1');
         const Img = document.getElementById('Img');
 
-        // Add click event listener to the "About" link
-     coverleft1.addEventListener('click', function(event) {
+        // Add click event listener to the "Imglink" image
+        coverleft1.addEventListener('click', function(event) {
             event.preventDefault(); // Prevent default link behavior
 
-            if (Img.classList.contains('visible')) {
-                // If the div is visible, hide it
-                Img.classList.remove('visible');
-                setTimeout(() => Img.classList.add('hidden'), 500); // Delay hiding after animation
-            } else {
-                // If the div is hidden, show it
+            if (!Img.classList.contains('visible')) {
+                // If the div is not visible, show it
                 Img.classList.remove('hidden');
                 setTimeout(() => Img.classList.add('visible'), 10); // Trigger animation
             }
         });
-
-
-
-
 
 
 
