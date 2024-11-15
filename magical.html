@@ -1,10 +1,28 @@
 <!DOCTYPE html>
+<!-- saved from url=(0067)https://raw.githack.com/Divyanshu-85/Project-file/main/magical.html -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Divyanshu Pandey</title>
     <style>
+      :root {
+  --clr-primary-800: hsl(217, 33%, 17%);
+}
+
+
+
+body {
+  display: grid;
+ min-block-size: 100vh;
+  place-content: center;
+  font-family: system-ui;
+  font-size: 1.125rem;
+ 
+}
+
 html{
-    background-color: black;
+   background-color: var(--clr-primary-800);
+   
+    /* background-color: black; */
     --white: #ffffff;
     --black: black;
       --primary-pink: #ff0000;
@@ -15,7 +33,7 @@ html{
   margin: 0;
   padding: 0;
 }
-.text{
+.text1{
             text-decoration: none;
             color: white;
             margin-right: 2rem;                        
@@ -154,6 +172,7 @@ html{
             margin-top: 4rem; 
          }
          .sidebar {
+          margin-top: 5.3rem;
           z-index: 4;
             position: fixed;
             left: -290px;
@@ -866,11 +885,6 @@ body[onload] div.leaf:nth-child(4) > div:nth-child(1) {
         }
 
 
-
-
-
-
-
   </style> 
 
    
@@ -878,14 +892,14 @@ body[onload] div.leaf:nth-child(4) > div:nth-child(1) {
 <body>
   <div class="sidebar" id="sidebar">
     <div class="head"></div>
-    <a href="#home" onclick="toggleSidebar()" >Home</a>
-    <a href="#profile" onclick="toggleSidebar()" >Profile</a>
-    <a href="https://rawcdn.githack.com/Divyanshu-85/Required-Document/d81aa8e0f0cd6de1277fad4ca97a1a541048130d/Best login form.html" onclick="toggleSidebar()" >Login</a>
-    <a href="#services" onclick="toggleSidebar()" >Services</a>
-    <a href="#contact" id="ContactLink" onclick="toggleSidebar()" >Contact</a>
-    <a href="#about" id="aboutLink" onclick="toggleSidebar()" >About</a>
+    <a href="https://raw.githack.com/Divyanshu-85/Project-file/main/magical.html#home" onclick="toggleSidebar()">Home</a>
+    <a href="https://raw.githack.com/Divyanshu-85/Project-file/main/magical.html#profile" onclick="toggleSidebar()">Profile</a>
+    <a href="https://rawcdn.githack.com/Divyanshu-85/Required-Document/d81aa8e0f0cd6de1277fad4ca97a1a541048130d/Best%20login%20form.html" onclick="toggleSidebar()">Login</a>
+    <a href="https://raw.githack.com/Divyanshu-85/Project-file/main/magical.html#services" onclick="toggleSidebar()">Services</a>
+    <a href="https://raw.githack.com/Divyanshu-85/Project-file/main/magical.html#contact" id="ContactLink" onclick="toggleSidebar()">Contact</a>
+    <a href="https://raw.githack.com/Divyanshu-85/Project-file/main/magical.html#about" id="aboutLink" onclick="toggleSidebar()">About</a>
     <div class="chat-icon" onclick="toggleChat()">
-        <img src="https://img.icons8.com/?size=100&id=nToPp1ZMxcSe&format=png&color=000000" class="pic1" alt="Chat Icon">
+        <img src="./magical_files/saved_resource" class="pic1" alt="Chat Icon">
     </div>
 </div>
 <div class="sidebar-toggle" id="tog" onclick="toggleSidebar()">☰ Menu</div>
@@ -902,36 +916,28 @@ body[onload] div.leaf:nth-child(4) > div:nth-child(1) {
               
 
 
-
-
-
-
-
-
-
-
                 <h3 class="write3">Hello !</h3>
                 <h1 class="write4">I'am Divyanshu Pandey</h1>
-                <h2 class="write5">Explore the journey of HTML & CSS.</h2>
+                <h2 class="write5">Explore the journey of Coading</h2>
                 <p class="boss2">Hello! I'm Divyanshu Pandey, a Class 11<sup>th</sup> student passionate about CSS and HTML.</p>
 
                  
               </div>
              <div class="img-container" alt="Divyanshu">
-              <img src="https://github.com/Divyanshu-85/project/blob/main/me.jpg?raw=true" class="pic" alt="Profile Picture of Divyanshu Pandey">
+              <img src="./magical_files/me.jpg" class="pic" alt="Profile Picture of Divyanshu Pandey">
              </div>    
                  </div>
                 </div>
                  </section>
 
-
+                    <br> 
 
                  <div class="chat-container" id="chat-container">
                   <div class="chatbox" id="chatbox"></div>
                   <div class="quick-replies" id="quick-replies">
-                      <button class="msg" onclick="sendQuickReply('Tell me a joke')">Some joke</button>
-                      <button class="msg" onclick="sendQuickReply('Fun fact')">Fun fact</button>
-                      <button class="msg" onclick="sendQuickReply('Help')">Help</button>
+                      <button class="msg" onclick="sendQuickReply(&#39;Tell me a joke&#39;)">Some joke</button>
+                      <button class="msg" onclick="sendQuickReply(&#39;Fun fact&#39;)">Fun fact</button>
+                      <button class="msg" onclick="sendQuickReply(&#39;Help&#39;)">Help</button>
                   </div>
                   <input type="text" id="userInput" placeholder="Type your message...">
                   <button onclick="sendMessage()">Send</button>
@@ -971,10 +977,10 @@ body[onload] div.leaf:nth-child(4) > div:nth-child(1) {
 <div class="king">
   <div id="aboutDiv" class="hidden">
 <div class="door-container">
-  <div class="door left-door"><img src="https://github.com/Divyanshu-85/Required-Document/blob/main/2.jpg?raw=true" class="cover1" id="coverleft1"> </div>
-  <div class="door right-door"><img src="https://github.com/Divyanshu-85/Required-Document/blob/main/1.jpg?raw=true" class="cover1" id="coverright1"></div>
+  <div class="door left-door"><img src="./magical_files/2.jpg" class="cover1" id="coverleft1"> </div>
+  <div class="door right-door"><img src="./magical_files/1.jpg" class="cover1" id="coverright1"></div>
     <div id="Img" class="hidden">
-  <img src="https://github.com/Divyanshu-85/Required-Document/blob/main/gatemen.png?raw=true" alt="Gateman" class="gateman" id="gateman"> 
+  <img src="./magical_files/gatemen.png" alt="Gateman" class="gateman" id="gateman"> 
         </div>
   <div class="door-content" id="doorContent">
     <div class="click">Click me</div>
@@ -984,7 +990,7 @@ body[onload] div.leaf:nth-child(4) > div:nth-child(1) {
 <div class="login-container" id="loginForm">
   <h4 class="horror">I am Devil</h4>
   <p id="question" class="Q"></p>
-  <input type="text" id="answer" class="ans" placeholder="Enter your answer" required>
+  <input type="text" id="answer" class="ans" placeholder="Enter your answer" required="">
   <button onclick="checkAnswer()" class="submitAns">Submit</button>
   <p id="message"></p>
 </div>
@@ -997,29 +1003,32 @@ body[onload] div.leaf:nth-child(4) > div:nth-child(1) {
   <div class="bookbox">
     <div class="book">
         <div class="flipbook centered" id="flipbook">
-            <div class="leaf">
+            <div class="leaf" style="transform: translate3d(0px, 0px, 0px);">
                 <div class="page front title external" style="background-color:#8d99ae; display: flex; align-items: center; justify-content: center;">
-                    <h1 style="font-size: 2em; color: #fff;"><img src="https://github.com/Divyanshu-85/Required-Document/blob/main/front.jpg?raw=true" class="devil"></h1>
+                    <h1 style="font-size: 2em; color: #fff;"><img src="./magical_files/front.jpg" class="devil"></h1>
                 </div>
                 <div class="page back" style="background-color:#2a9d8f;">
                     <div class="pageNumber">i</div>
-                    <img src="https://github.com/Divyanshu-85/Required-Document/blob/main/IMG_20241013_124219.jpg?raw=true1" class="itz-me" alt="" style="width:102%">
+                    <img src="./magical_files/IMG_20241013_124219.jpg" class="itz-me" alt="" style="width:102%">
                 </div>
             </div>
-            <div class="leaf">
+
+            <div class="leaf" style="transform: translate3d(0px, 0px, -1px);">
                 <div class="page front" style="background-color:#2a9d8f;">
-                    <div class="pageNumber">ii</div>
+                    <div class="pageNumber">iii</div>
                     <h2>Contents</h2>
                     <div class="contents-row">
                         <div class="text">Introduction</div>
                         <div class="spacer"></div>
                         <div class="text">1</div>
+                       
                     </div>
                     <div class="contents-row">
                         <div class="text">Passion</div>
                         <div class="spacer"></div>
                         <div class="text">3</div>
                     </div>
+                    <!-- <div id="mental" class="mental"> -->
                 </div>
                 <div class="page back" style="background-color:#e9c46a;">
                     <div class="pageNumber">1</div>
@@ -1035,7 +1044,7 @@ body[onload] div.leaf:nth-child(4) > div:nth-child(1) {
                           
                 </div>
             </div>
-            <div class="leaf">
+            <div class="leaf" style="transform: translate3d(0px, 0px, -2px);">
                 <div class="page front" style="background-color:#e9c46a;">
                     <div class="pageNumber">2</div>
                     <p class="write">साइबर दुनिया की रौशनी में, खुद को ढूंढता हूँ।
@@ -1051,8 +1060,12 @@ body[onload] div.leaf:nth-child(4) > div:nth-child(1) {
                     <br>
                     <p>Signature....<br>Divyanshu</p>
                 </div>
+
+
+
+                
                 <div class="page back external" style="background-color:#8d99ae; display: flex; align-items: center; justify-content: center;">
-                    <h1 style="font-size: 2em; color: #fff;"><img src="https://github.com/Divyanshu-85/Required-Document/blob/main/back.jpg?raw=true" class="devil"></h1>
+                    <h1 style="font-size: 2em; color: #fff;"><img src="./magical_files/back.jpg" class="devil"></h1>
                 </div>
             </div>
         </div>
@@ -1060,18 +1073,12 @@ body[onload] div.leaf:nth-child(4) > div:nth-child(1) {
 </div>
 
 
-
-
-
-
-
-
-
 </div>
 </div>
 </div>
       </div>
           
+      <br> 
             
       <div id="ContactDiv" class="hidden">
              <section class="section">
@@ -1094,8 +1101,6 @@ body[onload] div.leaf:nth-child(4) > div:nth-child(1) {
                 </div>
         </section>
 </div>
-               </main>
-              
 
                                 <!-- #Footer -->
                  <footer class="footer-section bg-black">
@@ -1175,7 +1180,7 @@ let userName = "";
     { question: "तुम कौन हो? तुम यहाँ क्यों आये हो??", answer: "" },
     { question: "{name}, तुम यहाँ क्यों आये हो?", answer: "FOR READING THE BOOK" },
     { question: " ठीक है,{name}, लेकिन तुमको किताब पढ़ने के लिए एक पहेली सुलझानी होगी", answer: "OK" },
-    { question: "{name}, एक ऐसी किताब है जिसे खोल कर पढ़ो तो आपको सब कुछ समझ आ जाता है, पर जब बंद करते हो तो सब भूल जाते हो। वो क्या है?", answer: "Dreams" }
+     { question: "{name}, एक ऐसी किताब है जिसे खोल कर पढ़ो तो आपको सब कुछ समझ आ जाता है, पर जब बंद करते हो तो सब भूल जाते हो। वो क्या है?", answer: "Dreams" }
   ];
   
   let currentQuestionIndex = 0;
@@ -1345,9 +1350,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
 
-
-
-
         
 
 
@@ -1365,6 +1367,45 @@ document.addEventListener("DOMContentLoaded", function() {
                 setTimeout(() => Img.classList.add('visible'), 10); // Trigger animation
             }
         });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        const textElement = document.getElementById('mental');
+        const message = " 🚩🚩जय श्री राम 🚩🚩";
+        let index = 0;
+
+        function typeText() {
+            function typeNext() {
+                if (index < message.length) {
+                    textElement.textContent += message.charAt(index);
+                    index++;
+                    setTimeout(typeNext, 100); // Adjust typing speed
+                }
+            }
+            typeNext();
+        }
+
+        window.onload = () => setTimeout(typeText, 1000); // Start typing after 1 second
+
+
+
+
+
+
+
 
 
 
@@ -1535,5 +1576,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-                </body>
-                </html>
+                
+                
+</body></html>
