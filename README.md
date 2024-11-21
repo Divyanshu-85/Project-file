@@ -16,6 +16,6 @@
 
 <hr>
 
-<h3>how to use your github project as published webside</h3>
+<h3>how to use your github project as published website</h3>
 <a href="https://raw.githack.com/">Converter</a>
 <hr>
