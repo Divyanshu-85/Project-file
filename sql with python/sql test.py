@@ -1,3 +1,7 @@
+
+
+
+
 import pyttsx3
 import mysql.connector
 mydb = mysql.connector.connect(
@@ -35,7 +39,7 @@ result = b.fetchone()  # Fetch one matching record
 if result:
     speak("Access granted! Welcome,", input_username)
     # Provide options to modify account
-    option = input("what Do you want to change yore uesrname, Password or Delete the account:- ").lower()
+    option = input("Do you want to change yore uesrname, Password or Delete the account:- ").lower()
     if option == "username":
         new_username = input("Enter your new username: ")
         update_query = "UPDATE account SET username = %s WHERE username = %s AND Password = %s"
