@@ -7,7 +7,7 @@ from tkinter import Tk, Label, Entry, Button, messagebox, filedialog, Listbox, S
 # Establish connection to the MySQL database
 def connect_to_db():
     return mysql.connector.connect(
-        host="localhost:3306",
+        host="programmer.helioho.st",
         user="programmer_Server",
         port=3306,
         password="Hacker@85",
