@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+            background: #f0f0f0;
+        }
+
+        .sidebar {
+            width: 250px;
+            background: #333;
+            color: white;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            box-sizing: border-box;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+        }
+
+        .progress-container {
+            margin: 20px 0;
+        }
+
+        .progress-bar {
+            background: #444;
+            border-radius: 20px;
+            overflow: hidden;
+            height: 20px;
+            margin-top: 10px;
+        }
+
+        .progress {
+            background: #4caf50;
+            height: 100%;
+            width: 0;
+            border-radius: 20px;
+            transition: width 1s ease-in-out;
+        }
+
+        .login-container {
+            background: #444;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .login-container h3 {
+            margin-top: 0;
+        }
+
+        .login-container label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        .login-container input {
+            width: 100%;
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .login-container button:hover {
+            background: #45a049;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        header {
+            background: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 50px;
+            text-align: center;
+        }
+
+        .project-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin: 20px auto;
+            max-width: 300px;
+            padding: 20px;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        section {
+            animation: fadeIn 1s ease-in;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Admin Panel</h2>
+        <div class="progress-container">
+            <h3>Progress</h3>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+        </div>
+        <div class="login-container">
+            <h3>Admin Login</h3>
+            <form id="login-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="content">
+        <header>
+            <h1>Welcome to My Portfolio</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hi, I'm Divyanshu. I'm a web developer with a passion for creating beautiful and functional websites.</p>
+        </section>
+        
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project-card">
+                <h3>Project 1</h3>
+                <p>Description of project 1.</p>
+            </div>
+            <div class="project-card">
+                <h3>Project 2</h3>
+                <p>Description of project 2.</p>
+            </div>
+        </section>
+        
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>You can reach me at <a href="mailto:divyanshu@example.com">divyanshu@example.com</a></p>
+        </section>
+    </div>
+    
+    <script>
+        // Simulate progress bar update
+        let progress = 0;
+        const progressBar = document.querySelector('.progress');
+
+        function updateProgressBar() {
+            progress += 10;
+            if (progress > 100) {
+                progress = 100;
+            }
+            progressBar.style.width = progress + '%';
+        }
+
+        // Update the progress bar every second
+        setInterval(updateProgressBar, 1000);
+
+        // Handle login form submission
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // For demonstration purposes, we'll just log the credentials
+            console.log('Username:', username);
+            console.log('Password:', password);
+
+            // Add your login logic here
+        });
+    </script>
+</body>
+</html>
